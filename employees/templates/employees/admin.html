@@ -1,0 +1,48 @@
+{% extends 'admin/base_site.html' %}
+
+{% block content %}
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJv1vYAKd9F8r+Hf2Qe8SOFbyK/zI7OB8jgfUgL3VUpZVSJx1M9j5x64M5yC" crossorigin="anonymous">
+</head>
+
+    <h1 class="my-4">Admin Dashboard</h1>
+
+    <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Total Employees</h5>
+                    <p class="card-text display-4">{{ employee_count }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-8 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Recent Employees</h5>
+                    <div class="sonny" style="display: flex;">
+                    <ul class="list-group">
+                        {% for employee in employee %}
+                            <li class="list-group-item">
+                                {{ employee.first_name }} {{ employee.last_name }}
+                                <br>
+                                <small>Joined on: {{ employee.hire_date }}</small>
+                            </li>
+                            {% if employee.profile_picture %}
+                            <li><img src="{{ employee.profile_picture.url }}" alt=""></li>
+                            {% else %}
+                            <h3>no img found</h3>
+                            {% endif %}
+                            
+                            <li><a href="{% url 'delete_employee' employee.id %}">Delete</a> </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0bA8M4IcjV2g3tB/a8fFq64Umlgyx5eez3fEo47Q9D7qY7bs" crossorigin="anonymous"></script>
+
+{% endblock %}

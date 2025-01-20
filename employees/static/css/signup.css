@@ -1,0 +1,25 @@
+body{
+    /* background-image: url("{% static 'images/bus.jpg' %}"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: red;
+    background-image: url('{% static "images/back.webp" %}');
+}
+/* h1{ */
+    /* color: #fff;
+}
+form{
+    padding: 40px;
+    margin: auto;
+}
+.row justify-content-center{
+    padding: 20px;
+    width: 400px;
+
+} */
+div{
+    background-color: none;
+}
+
+

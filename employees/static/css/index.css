@@ -1,0 +1,103 @@
+.form-container {
+    background-color: #3498DB;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px auto;
+}
+
+.form-header {
+    background-color: #3498DB;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    padding: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.btn-primary {
+    background-color: #3498DB;
+    border-color: #007bff;
+    color: #fff; 
+}
+
+.btn-primary:hover {
+    background-color: #2980B9;
+    border-color: #0056b3;
+}
+
+    /* General Body Styling */
+    body {
+        background-color: #f4f6f9; /* Light background for modern look */
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Dashboard Header */
+    .dashboard-header {
+        background-color: #4A90E2; /* Bright and eye-catching blue */
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 0 0 8px 8px;
+        font-weight: bold;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+        background-color: #2C3E50; /* Deep navy for professionalism */
+    }
+
+    .navbar-brand,
+    .nav-link {
+        color: #ECF0F1; /* Subtle white for nav links */
+    }
+
+    .nav-link:hover {
+        color: #F39C12; /* Highlight effect */
+    }
+
+    /* Cards */
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for elegance */
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+        color: #4A90E2; /* Matches header color */
+    }
+
+    .card-title {
+        font-weight: bold;
+        color: #34495E; /* Darker gray-blue for titles */
+    }
+
+    .btn-primary {
+        background-color: #4A90E2;
+        border-color: #4A90E2;
+    }
+
+    .btn-primary:hover {
+        background-color: #357ABD; /* Darker blue for hover effect */
+        border-color: #357ABD;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #2C3E50;
+        color: #ECF0F1;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    /* Custom Animations */
+    .card:hover {
+        transform: scale(1.05); /* Subtle zoom effect */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .btn-primary:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Glow effect on hover */
+    }
+

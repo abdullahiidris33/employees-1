@@ -1,0 +1,13 @@
+.col-md-8{
+    width: 70%;
+    border:  2px solid wheat;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin-top: 80px;
+    padding: 80px;
+}
+form input{
+    width: 200px;
+    height: 40px;
+    border-color: blue;
+}

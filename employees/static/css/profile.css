@@ -1,0 +1,37 @@
+
+body {
+    background-color: #f8f9fa;
+}
+.profile-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    object-fit: cover;
+}
+
+.profile-card h2 {
+    margin-top: 15px;
+    color: #333;
+}
+.profile-card p {
+    color: #0966687c
+}
+.profile-details {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.profile-details h5 {
+    color: #007bff;
+}
+.btn-edit {
+    margin-top: 20px;
+}

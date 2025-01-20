@@ -1,0 +1,110 @@
+    body {
+        background-color: #f4f6f9; /* Light, modern background */
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Sidebar Styling */
+    .sidebar {
+        background-color: #2C3E50; /* Dark navy for sidebar */
+        color: #ECF0F1;
+        min-height: 100vh;
+    }
+
+    .sidebar a {
+        color: #ECF0F1; /* Light text for links */
+        padding: 10px 20px;
+        display: block;
+        border-radius: 4px;
+    }
+
+    .sidebar a:hover {
+        background-color: #34495E; /* Slightly lighter shade for hover */
+        text-decoration: none;
+    }
+
+    .sidebar .nav-link.active {
+        background-color: #1ABC9C; /* Highlighted link */
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+        background-color: #1ABC9C; /* Vibrant green-teal */
+    }
+
+    .navbar .navbar-brand {
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    .navbar .navbar-brand:hover {
+        color: #ECF0F1;
+    }
+
+    /* Main Content */
+    .content {
+        padding: 30px;
+    }
+
+    .content h1 {
+        color: #2C3E50; /* Dark navy for headers */
+        font-weight: bold;
+    }
+
+    /* Card Styles */
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    }
+
+    .card h5 {
+        font-weight: bold;
+    }
+
+    .card .btn {
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+
+    .card.text-white.bg-primary {
+        background-color: #3498DB !important; /* Vibrant blue */
+    }
+
+    .card.text-white.bg-success {
+        background-color: #27AE60 !important; /* Deep green */
+    }
+
+    .card.text-white.bg-warning {
+        background-color: #F39C12 !important; /* Bright orange */
+    }
+
+    .card.text-white.bg-danger {
+        background-color: #E74C3C !important; /* Vibrant red */
+    }
+
+    .card:hover {
+        transform: translateY(-5px); /* Hover lift effect */
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #2C3E50;
+        color: #ECF0F1;
+        text-align: center;
+        padding: 15px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .sidebar {
+            min-height: auto;
+        }
+
+        .sidebar a {
+            text-align: center;
+        }
+    }
+

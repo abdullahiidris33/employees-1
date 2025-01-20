@@ -1,0 +1,30 @@
+.dashboard-container {
+margin: 20px auto;
+max-width: 1200px;
+}
+.employee-row {
+border: 1px solid #ddd;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+margin-bottom: 15px;
+/* overflow: hidden; */
+}
+.profile-picture {
+width: 100px;
+height: 100px;
+object-fit: cover;
+border-radius: 50%;
+}
+.employee-info {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+padding: 15px;
+}
+
+.employee-title {
+font-weight: bold;
+color: #495057;
+margin: 20px;
+
+}
