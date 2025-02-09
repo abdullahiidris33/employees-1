@@ -7,16 +7,55 @@
     <title>Admin Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static './css/leader.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        body {
+            background-color: #f8f9fa;
+        }
         h2, h4, h5 {
             color: #1abc9c;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar a {
+            color: white !important;
+        }
+        .sidebar {
+            background-color: #343a40;
+            height: 100vh;
+        }
+        .sidebar .nav-link {
+            color: white;
+        }
+        .sidebar .nav-link:hover, .sidebar .active {
+            background-color: #007bff;
+            color: white;
+        }
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #1abc9c;
+        }
+        .card {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card i {
+            font-size: 2rem;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Admin Dashboard</a>
+            <a class="navbar-brand fw-bold" href="#">Admin Dashboard</a>
+            <div class="d-flex align-items-center">
+                <span class="text-white me-3">Welcome, Admin</span>
+                <a href="{% url 'logout' %}" class="btn btn-light btn-sm">Logout</a>
+            </div>
         </div>
     </nav>
 
@@ -26,44 +65,46 @@
             <nav class="col-md-2 d-md-block sidebar py-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Dashboard</a>
+                        <a class="nav-link active" href="#"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'employeelist' %}">Employee List</a>
+                        <a class="nav-link" href="{% url 'employeelist' %}"><i class="fas fa-user me-2"></i> Employee List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'adminattendance' %}">Attendance</a>
+                        <a class="nav-link" href="{% url 'adminattendance' %}"><i class="fas fa-calendar-check me-2"></i> Attendance</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Feed</a>
+                        <a class="nav-link" href="#"><i class="fas fa-newspaper me-2"></i> Feed</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'register_admin' %}">Register</a>
+                        <a class="nav-link" href="{% url 'register_admin' %}"><i class="fas fa-user-plus me-2"></i> Register</a>
                     </li>
                 </ul>
             </nav>
 
+            <!-- Main Content -->
             <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4 content">
                 <h1 class="mt-4">Welcome to the Admin Dashboard</h1>
-            <div class="mother" style="display: flex; ">
-                <div class="profile-card">
-                    <img src="{% static 'images/soj.jpg' %}" alt="">
+                <div class="d-flex align-items-center mt-4">
+                    <div class="profile-card">
+                        <img src="{% static 'images/soj.jpg' %}" alt="Profile">
+                    </div>
+                    <div class="note ms-4">
+                        <h2>Abdullahi Idris</h2>
+                        <h4>Professional Software Developer</h4>
+                        <h4>programmingwithcoys@gmail.com</h4>
+                        <h4>Nigeria</h4>
+                        <h5>+2347043642350</h5>
+                    </div>
                 </div>
-                <div class="note" style="margin-top: 40px; margin-left: 40px;">
-                    <h2>Abdullahi Idris</h2>
-                    <h2>professional software Developer</h2>
-                    <h4>Programmingwithwithcoys@gmail.com</h4>
-                    <h4>Nigeria</h4>
-                    <h5> +2347043642350 </h5>
-                </div>
-            </div>
-            
-               
-                <div class="row" style="margin-top: 40px;">
+
+                <!-- Dashboard Cards -->
+                <div class="row mt-4">
                     <div class="col-lg-3 col-md-6">
                         <div class="card text-white bg-primary mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Employees</h5>
+                            <div class="card-body text-center">
+                                <i class="fas fa-users"></i>
+                                <h5 class="card-title mt-2">Employees</h5>
                                 <p class="card-text">View and manage employees.</p>
                                 <a href="{% url 'employeelist' %}" class="btn btn-light btn-sm">Go to Employees</a>
                             </div>
@@ -71,8 +112,9 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="card text-white bg-success mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Attendance</h5>
+                            <div class="card-body text-center">
+                                <i class="fas fa-calendar-check"></i>
+                                <h5 class="card-title mt-2">Attendance</h5>
                                 <p class="card-text">Track attendance records.</p>
                                 <a href="{% url 'attendancelist' %}" class="btn btn-light btn-sm">Go to Attendance</a>
                             </div>
@@ -80,8 +122,9 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="card text-white bg-warning mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Feed</h5>
+                            <div class="card-body text-center">
+                                <i class="fas fa-newspaper"></i>
+                                <h5 class="card-title mt-2">Feed</h5>
                                 <p class="card-text">Manage the feed section.</p>
                                 <a href="{% url 'feeds' %}" class="btn btn-light btn-sm">Go to Feed</a>
                             </div>
@@ -89,8 +132,9 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="card text-white bg-danger mb-3">
-                            <div class="card-body">
-                                <h5 class="card-title">Register</h5>
+                            <div class="card-body text-center">
+                                <i class="fas fa-user-plus"></i>
+                                <h5 class="card-title mt-2">Register</h5>
                                 <p class="card-text">Add new admin or users.</p>
                                 <a href="{% url 'register_admin' %}" class="btn btn-light btn-sm">Register Now</a>
                             </div>

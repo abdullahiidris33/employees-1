@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -139,6 +140,8 @@ STATIC_FILES_DIRS = [
 
 from decouple import config
 
+
+
 SECRET_KEY = config('SECRET_KEY')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
@@ -166,10 +169,15 @@ EMAIL_HOST_USER = 'rprogrammer25@gmail.com'
 EMAIL_HOST_PASSWORD = 'ieij fths behi skoq' 
 
 
-import django_heroku
-django_heroku.settings(locals())
+# import heroku3
 
+# api_key = "HRKU-e1cec226-fdd3-4639-a96c-dd264461e803"  
+# heroku_conn = heroku3.from_key(api_key)
 
+# # List all apps
+# apps = heroku_conn.apps()
+# for app in apps:
+#     print(app.name)
 
 
 

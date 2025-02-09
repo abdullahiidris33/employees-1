@@ -233,7 +233,7 @@ def register(request):
 
         employee.save()
 
-        return redirect('logins')
+        return redirect('login')
     return render(request, 'employees/index.html')
 
 def logins(request):
